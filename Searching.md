@@ -1,36 +1,35 @@
 1. 4 steps  
 2. 1 step  
 3. 17 steps  
-4. ```
-#include <iostream>
-using namespace std;
+4. ```  
+#include <iostream>  
+using namespace std;  
+const int SIZE = 100000;  
 
-const int SIZE = 100000;
-
-//if we search for 95555
+//if we search for 95555  
 // Linear Search
-int linearSearch(int arr[], int size, int &steps) {
-    steps = 0;
-    for (int i = 0; i < size; i++) {
-        steps++;
+int linearSearch(int arr[], int size, int &steps) {  
+    steps = 0;  
+    for (int i = 0; i < size; i++) {  
+        steps++;  
         if (arr[i] == 95555) {  
-            return i;
-        }
-    }
-    // no target
-    return -1;
-}
+            return i;  
+        }  
+    }  
+    // no target  
+    return -1;  
+}  
 
-// Binary Search
-int binarySearch(int arr[], int size, int &steps) {
-    int left = 0;
-    int right = size - 1;
-    steps = 0;
+// Binary Search  
+int binarySearch(int arr[], int size, int &steps) {  
+    int left = 0;  
+    int right = size - 1;  
+    steps = 0;  
 
-    while (left <= right) {
-        steps++;
+    while (left <= right) {  
+        steps++;  
 
-        int mid = (right + left) / 2;
+        int mid = (right + left) / 2;  
 
         if (arr[mid] == 95555) {  
             return mid;
@@ -46,11 +45,11 @@ int binarySearch(int arr[], int size, int &steps) {
     }
 
     // no target
-    return -1;
+    return -1;  
 }
 
-int main() {
-    int arr[SIZE];
+int main() {  
+    int arr[SIZE];  
 
     for (int i = 0; i < SIZE; i++) {
         arr[i] = i;
@@ -68,7 +67,7 @@ int main() {
     cout << "Binary Search index: " << index2 << endl;
     cout << "Binary Search steps: " << stepsBinary << endl;
 
-    return 0;
+    return 0;  
 }
 ```
 
@@ -89,13 +88,13 @@ RandomSearch(vector, target)
 
 Best-Case: O(1) Average-Case: O(n) Worst-Case: O(n)  
 
-```
-#include <iostream>
-#include <vector>
-#include <random>
-int main() {
-    const int SIZE = 100000;
-    std::vector<int> data(SIZE);
+```  
+#include <iostream>  
+#include <vector>  
+#include <random>  
+int main() {  
+    const int SIZE = 100000;  
+    std::vector<int> data(SIZE);  
     
-}
-```
+}  
+```  
