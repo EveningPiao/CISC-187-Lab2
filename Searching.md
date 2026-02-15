@@ -1,7 +1,8 @@
 1. 4 steps  
 2. 1 step  
 3. 17 steps  
-4. ```  
+4. 
+```
 #include <iostream>  
 using namespace std;  
 const int SIZE = 100000;  
